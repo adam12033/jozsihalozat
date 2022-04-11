@@ -1,0 +1,56 @@
+ip calculator: https://www.site24x7.com/tools/ipv4-subnetcalculator.html
+
+grafikusLinux.ova
+
+apt update
+apt install lxde
+reboot
+
+
+mikrotik.ova
+
+admin
+nincs jelszo
+
+
+192.168.10.0 /24 256
+32
+255.255.255.000 00000 24+3=27
+2 az ötödiken 32
+
+
+192.168.10.1 /27
+192.168.10.30
+
+192.168.10.33 /27
+192.168.10.62
+
+192.168.10.64 /27
+	  .65
+          .94
+
+192.168.10.96 /27
+	  .97
+          .126
+
+
+nano /etc/network/interfaces
+allow-hotplug enp0s3
+iface enp0s3 inet static
+	address 192.168.10.98/27
+	gateway 192.168.10.97
+	dns-servers 8.8.8.8, 8.8.4.4
+
+ifdown enp0s3
+ifup enp0s3
+ip a
+
+
+
+
+grafikusLinux.ova
+
+LXTertimal: 
+apt install wine
+exit
+
